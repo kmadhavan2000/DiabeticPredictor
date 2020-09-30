@@ -33,7 +33,7 @@ def predict():
     
     finalfeatures = st.transform(np.array([[preg,gluco,bp,skinthck,insu,bmi,dpf,age]]))
     prediction = model.predict(finalfeatures)
-    return render_template('index.html', prediction_text='Diabetic is  $ {}'.format(round(prediction)))
+    return render_template('index.html', prediction_text='Diabetic is  {}'.format(bool(round(prediction))))
 
 
 if __name__ == "__main__":
