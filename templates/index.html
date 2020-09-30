@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetic Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Dibateic Predictor</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	Enter Pregnancie Value: <input type="text" name="preg" placeholder="Enter Pregnancie Value: " required="required" /><br>
+        Enter Gluco Value: <input type="text" name="gluco" placeholder="Enter Gluco Value: " required="required" /><br>
+	Enter BP Value: <input type="text" name="bp" placeholder="Enter BP Value: " required="required" /><br>
+	Enter Skinthickness Value: <input type="text" name="skinthck" placeholder="Enter Skinthickness Value: " required="required" /><br>
+	Enter Insulin Value: <input type="text" name="insu" placeholder="Enter Insulin Value: " required="required" /><br>
+	Enter BMI Value: <input type="text" name="bmi" placeholder="Enter BMI Value: " required="required" /><br>
+	Enter DiabetesPedigreeFunction Value: <input type="text" name="dbf" placeholder="Enter PDiabetesPedigreeFunction Value: " required="required" /><br>
+	Enter Age Value: <input type="text" name="age" placeholder="Enter Age Value: " required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Diabetic</button>
+    </form>
+
+   <br>
+   <br>
+ 
+
+ </div>
+
+
+</body>
+</html>
